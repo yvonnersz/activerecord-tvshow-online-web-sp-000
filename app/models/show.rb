@@ -7,7 +7,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.most_popular_show
-    binding.pry
+    self.order(rating: :desc).first[:name]
   end
 
 end
