@@ -14,7 +14,7 @@ class Show < ActiveRecord::Base
     self.order(rating: :asc).first[:rating]
   end
 
-  def least_popular_show
+  def self.least_popular_show
     binding.pry
     self.order(rating: :asc).first[:name]
   end
